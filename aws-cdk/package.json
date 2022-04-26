@@ -1,0 +1,32 @@
+{
+  "name": "observability-stack",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "sst test",
+    "start": "sst start",
+    "build": "sst build",
+    "deploy": "sst deploy",
+    "remove": "sst remove"
+  },
+  "eslintConfig": {
+    "extends": [
+      "serverless-stack"
+    ]
+  },
+  "devDependencies": {
+    "@serverless-stack/cli": "0.69.7",
+    "@serverless-stack/resources": "0.69.7",
+    "@tsconfig/node14": "^1.0.1",
+    "@types/aws-lambda": "^8.10.70",
+    "@types/node": "<15.0.0",
+    "aws-cdk-lib": "2.15.0",
+    "datadog-cdk-constructs-v2": "^0.2.0",
+    "typescript": "4.4.4"
+  },
+  "dependencies": {
+    "@sentry/serverless": "^6.19.7",
+    "axios": "^0.27.1",
+    "envalid": "^7.3.1"
+  }
+}
