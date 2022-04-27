@@ -7,7 +7,7 @@ const baseHandler: APIGatewayProxyHandlerV2 = async (event) => {
   const request = event.queryStringParameters || {}
   
   const { data: currencies } = await axios.get('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies.json')
-  console.log(`Found ${currencies.length} currencies`)
+  console.log(`Found ${Object.keys(currencies).length} currencies`)
   
   if (request.shouldFail) {
     console.log('When reviewing parameters, we found that the request should fail')
